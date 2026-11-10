@@ -21,16 +21,18 @@
   </script>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/animations.js" defer></script>
+  <script src="js/navigation.js" defer></script>
 </head>
 <body>
   <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
   <header><div class="barra largura">
     <a class="marca" href="#inicio"><span aria-hidden="true">♨</span>Brasa &amp; Sabor<small>Restaurante self-service</small></a>
-    <nav aria-label="Navegação principal"><a href="#inicio">Início</a><a href="#buffet">Buffet &amp; Churrasco</a><a href="#cardapio">Cardápio</a><a href="#sobre">Sobre</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a></nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span aria-hidden="true">☰</span></button>
+    <nav id="menu-principal" aria-label="Navegação principal"><a href="#inicio">Início</a><a href="#buffet">Buffet &amp; Churrasco</a><a href="#cardapio">Cardápio</a><a href="#sobre">Sobre</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a><a class="horario-menu" href="#horarios">Ver horário</a></nav>
     <a class="botao" href="#horarios">Ver horário</a>
   </div></header>
   <main id="conteudo">
-    <section id="inicio"><div class="largura">
+    <section id="inicio"><img class="hero-compacto" src="assets/images/churrasco-960.webp" width="960" height="640" alt="Churrasco brasileiro servido à mesa" fetchpriority="high" decoding="async"><div class="largura">
       <p class="rotulo">Restaurante self-service</p><h1>Brasa &amp; <em>Sabor</em></h1>
       <p class="chamada">Comida caseira, qualidade e variedade todos os dias.</p>
       <p class="intro">Monte seu prato com receitas brasileiras, saladas frescas e cortes preparados na churrasqueira.</p>
