@@ -24,49 +24,33 @@
 </head>
 <body>
   <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
-  <header class="cabecalho">
-    <div class="container">
-      <a class="marca" href="#inicio">Brasa &amp; Sabor</a>
-      <p>Restaurante self-service e churrascaria</p>
-      <nav aria-label="Navegação principal">
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#buffet">Buffet &amp; Churrasco</a></li>
-          <li><a href="#cardapio">Cardápio</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
+  <header><div class="barra largura">
+    <a class="marca" href="#inicio"><span aria-hidden="true">♨</span>Brasa &amp; Sabor<small>Restaurante self-service</small></a>
+    <nav aria-label="Navegação principal"><a href="#inicio">Início</a><a href="#buffet">Buffet &amp; Churrasco</a><a href="#cardapio">Cardápio</a><a href="#sobre">Sobre</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a></nav>
+    <a class="botao" href="#horarios">Ver horário</a>
+  </div></header>
+  <main id="conteudo">
+    <section id="inicio"><div class="largura">
+      <p class="rotulo">Restaurante self-service</p><h1>Brasa &amp; <em>Sabor</em></h1>
+      <p class="chamada">Comida caseira, qualidade e variedade todos os dias.</p>
+      <p class="intro">Monte seu prato com receitas brasileiras, saladas frescas e cortes preparados na churrasqueira.</p>
+      <div class="acoes"><a class="botao" href="#cardapio">Conheça o cardápio</a><a class="botao contorno" href="#contato">Como chegar</a></div>
+    </div></section>
+    <section id="sobre" class="destaques" aria-label="Sobre o restaurante"><div class="largura quatro">
+      <div><i aria-hidden="true">♨</i><h3>Buffet variado</h3><p>Diversas opções todos os dias</p></div>
+      <div><i aria-hidden="true">✪</i><h3>Qualidade</h3><p>Ingredientes selecionados</p></div>
+      <div><i aria-hidden="true">⌂</i><h3>Ambiente agradável</h3><p>Conforto para sua refeição</p></div>
+      <div><i aria-hidden="true">♡</i><h3>Atendimento local</h3><p>Equipe atenciosa e dedicada</p></div>
+    </div></section>
+    <section id="buffet" class="largura"><div class="vitrine">
+      <img loading="lazy" src="assets/images/buffet-960.webp" alt="Buffet de pratos quentes em cubas de serviço">
+      <div><p class="rotulo">Nosso buffet</p><h2>Variedade e sabor<br>no seu dia a dia</h2>
+      <p>Um buffet completo, com pratos quentes, acompanhamentos, saladas e carnes preparadas com tempero caseiro.</p>
+      <ul class="lista"><li>Pratos quentes e frescos</li><li>Diversas opções de saladas</li><li>Carnes grelhadas e assadas</li><li>Acompanhamentos variados</li></ul>
+      <p class="precos">Buffet por quilo: R$ 69,90/kg<br>Buffet com churrasco: R$ 89,90/kg</p></div>
     </div>
-  </header>
-
-  <main id="conteudo" class="container">
-    <section id="inicio" aria-labelledby="titulo-inicio"><img class="foto-hero" fetchpriority="high" src="assets/images/comida-brasileira-960.webp" srcset="assets/images/comida-brasileira-480.webp 480w, assets/images/comida-brasileira-960.webp 960w" sizes="(max-width: 360px) calc(100vw - 32px), (max-width: 640px) calc(100vw - 40px), (max-width: 800px) calc((100vw - 84px) / 2.35), (max-width: 1050px) calc((100vw - 96px) / 2.35), (max-width: 1276px) calc((100vw - 96px) * 0.32), (max-width: 1279px) 378px, (max-width: 1536px) calc((100vw - 96px) * 0.32), 461px" width="960" height="720" alt="Mesa com pratos da culinária brasileira" decoding="async">
-      <p class="destaque">Comida brasileira feita com carinho</p>
-      <h1 id="titulo-inicio">Seu almoço com sabor de casa e brasa acesa.</h1>
-      <p>No Brasa &amp; Sabor, você monta seu prato com receitas brasileiras, saladas frescas e cortes preparados na churrasqueira.</p>
-      <a class="botao" href="#cardapio">Conheça o cardápio</a>
-    </section>
-
-    <section id="buffet" aria-labelledby="titulo-buffet">
-      <h2 id="titulo-buffet">Buffet &amp; Churrasco</h2>
-      <div class="grade">
-        <article class="bloco">
-          <h3>Buffet self-service</h3>
-          <p>Monte seu prato com arroz soltinho, feijão caseiro, massas, legumes, saladas e pratos quentes que variam a cada dia.</p>
-          <p><strong>Buffet por quilo: R$ 69,90/kg</strong></p>
-        </article>
-        <article class="bloco">
-          <h3>Churrasco na brasa</h3>
-          <p>Picanha, fraldinha, linguiça artesanal e frango assado, servidos com farofa, vinagrete e mandioca.</p>
-          <p><strong>Buffet com churrasco: R$ 89,90/kg</strong></p>
-        </article>
-      </div>
-    </section>
-
-    <section id="cardapio" aria-labelledby="titulo-cardapio">
-      <h2 id="titulo-cardapio">Cardápio</h2>
+    <section id="cardapio"><h3>Cardápio e preços</h3>
+      
       <p>Algumas sugestões para o seu almoço. Os pratos do buffet podem variar diariamente.</p>
       <div class="grade">
         <article class="bloco">
@@ -94,55 +78,27 @@
       </div>
       <p class="observacao">Restaurante fictício. Todos os preços são ilustrativos.</p>
     </section>
-
-    <section id="sobre" aria-labelledby="titulo-sobre">
-      <h2 id="titulo-sobre">Sobre</h2>
-      <p>O Brasa &amp; Sabor nasceu da ideia de reunir a variedade do self-service com o sabor do churrasco brasileiro. Somos um restaurante fictício de ambiente simples e acolhedor, pensado para o almoço em família, com amigos ou durante a rotina de trabalho.</p>
-      <p>Nossa proposta é oferecer comida bem preparada, variedade e atendimento atencioso em cada visita.</p>
     </section>
-
-    <section id="galeria" aria-labelledby="titulo-galeria">
-      <h2 id="titulo-galeria">Galeria</h2>
-      <p>Imagens ilustrativas do salão, do buffet e do churrasco brasileiro.</p>
-      <ul class="galeria grade" aria-label="Espaços previstos para a galeria">
-        <li class="bloco"><img loading="lazy" src="assets/images/salao-960.webp" srcset="assets/images/salao-480.webp 480w, assets/images/salao-960.webp 960w" sizes="(max-width: 360px) calc(100vw - 34px), (max-width: 640px) calc(100vw - 42px), (max-width: 1050px) calc((100vw - 110px) / 3), (max-width: 1276px) calc((100vw - 150px) / 3), (max-width: 1279px) 376px, (max-width: 1536px) calc((100vw - 166px) / 3), 457px" width="960" height="720" alt="Interior acolhedor de restaurante" decoding="async"><span>Salão e ambiente</span></li>
-        <li class="bloco"><img loading="lazy" src="assets/images/buffet-960.webp" srcset="assets/images/buffet-480.webp 480w, assets/images/buffet-960.webp 960w" sizes="(max-width: 360px) calc(100vw - 34px), (max-width: 640px) calc(100vw - 42px), (max-width: 1050px) calc((100vw - 110px) / 3), (max-width: 1276px) calc((100vw - 150px) / 3), (max-width: 1279px) 376px, (max-width: 1536px) calc((100vw - 166px) / 3), 457px" width="960" height="720" alt="Pratos quentes em buffet self-service" decoding="async"><span>Buffet do dia</span></li>
-        <li class="bloco"><img loading="lazy" src="assets/images/churrasco-960.webp" srcset="assets/images/churrasco-480.webp 480w, assets/images/churrasco-960.webp 960w" sizes="(max-width: 360px) calc(100vw - 34px), (max-width: 640px) calc(100vw - 42px), (max-width: 1050px) calc((100vw - 110px) / 3), (max-width: 1276px) calc((100vw - 150px) / 3), (max-width: 1279px) 376px, (max-width: 1536px) calc((100vw - 166px) / 3), 457px" width="960" height="720" alt="Churrasco brasileiro servido à mesa" decoding="async"><span>Churrasco na brasa</span></li>
-      </ul>
+    <section id="galeria"><div class="largura"><p class="rotulo">Galeria</p><h2>Conheça nosso espaço</h2>
+      <div class="fotos">
+        <img loading="lazy" src="assets/images/salao-480.webp" srcset="assets/images/salao-480.webp 480w, assets/images/salao-960.webp 960w" sizes="(max-width: 600px) 45vw, 24vw" alt="Salão do restaurante">
+        <img loading="lazy" src="assets/images/galeria-buffet-480.webp" alt="Buffet do dia">
+        <img loading="lazy" src="assets/images/galeria-churrasco-480.webp" alt="Churrasco brasileiro">
+        <img loading="lazy" src="assets/images/comida-brasileira-480.webp" alt="Mesa com pratos brasileiros">
+      </div></div></section>
+    <section id="horarios" class="largura faixa"><h2>Horário de<br>funcionamento</h2>
+      <div><strong>Segunda a sexta</strong><p>11h às 15h</p></div><div><strong>Sábado, domingo e feriados</strong><p>11h às 16h</p></div>
+      <a class="botao" href="#contato">Ver localização</a>
     </section>
-
-    <section id="contato" aria-labelledby="titulo-contato">
-      <h2 id="titulo-contato">Contato</h2>
-      <div class="grade">
-        <div>
-          <h3>Onde estamos</h3>
-          <address>
+  </main>
+  <footer><div class="largura"><a class="marca" href="#inicio"><span aria-hidden="true">♨</span>Brasa &amp; Sabor<small>Restaurante self-service</small></a>
+    <div id="contato"><address>
             Rua das Brasas, 123 — Centro<br>
             Cidade Exemplo — SP<br>
             Telefone: (11) 0000-0000<br>
             E-mail: <a href="mailto:contato@brasaesabor.example">contato@brasaesabor.example</a>
-          </address>
-          <p class="observacao">Endereço e contatos fictícios, apenas para demonstração.</p>
-        </div>
-        <div>
-          <h3>Horário de funcionamento</h3>
-          <ul class="horarios">
-            <li>Segunda a sexta: das 11h às 15h</li>
-            <li>Sábado e domingo: das 11h às 16h</li>
-            <li>Feriados: das 11h às 16h</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="rodape">
-    <div class="container">
-      <p>Brasa &amp; Sabor — Restaurante e Churrascaria</p>
-      <p>Projeto demonstrativo de um restaurante fictício.</p>
-      <p>Desenvolvido por Shaide</p>
-    </div>
-  </footer>
+          </address><p>Endereço e contatos fictícios, apenas para demonstração.</p></div>
+    <p class="credito">Desenvolvido por Shaide</p>
+  </div></footer>
 </body>
 </html>
-
