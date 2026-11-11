@@ -19,6 +19,7 @@
       }, 4000);
     })();
   </script>
+  <link rel="preload" as="image" href="assets/images/churrasco-960.webp" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/animations.js" defer></script>
   <script src="js/navigation.js" defer></script>
@@ -32,7 +33,7 @@
     <a class="botao" href="#horarios">Ver horário</a>
   </div></header>
   <main id="conteudo">
-    <section id="inicio"><img class="hero-compacto" src="assets/images/churrasco-960.webp" width="960" height="640" alt="Churrasco brasileiro servido à mesa" fetchpriority="high" decoding="async"><div class="largura">
+    <section id="inicio"><div class="largura">
       <p class="rotulo">Restaurante self-service</p><h1>Brasa &amp; <em>Sabor</em></h1>
       <p class="chamada">Comida caseira, qualidade e variedade todos os dias.</p>
       <p class="intro">Monte seu prato com receitas brasileiras, saladas frescas e cortes preparados na churrasqueira.</p>
@@ -45,7 +46,7 @@
       <div><i aria-hidden="true">♡</i><h3>Atendimento local</h3><p>Equipe atenciosa e dedicada</p></div>
     </div></section>
     <section id="buffet" class="largura"><div class="vitrine">
-      <img loading="lazy" src="assets/images/buffet-960.webp" alt="Buffet de pratos quentes em cubas de serviço">
+      <img loading="lazy" decoding="async" width="960" height="640" srcset="assets/images/buffet-480.webp 480w, assets/images/buffet-960.webp 960w" sizes="(max-width: 700px) 90vw, (max-width: 1600px) 45vw, 720px" src="assets/images/buffet-960.webp" alt="Buffet de pratos quentes em cubas de serviço">
       <div><p class="rotulo">Nosso buffet</p><h2>Variedade e sabor<br>no seu dia a dia</h2>
       <p>Um buffet completo, com pratos quentes, acompanhamentos, saladas e carnes preparadas com tempero caseiro.</p>
       <ul class="lista"><li>Pratos quentes e frescos</li><li>Diversas opções de saladas</li><li>Carnes grelhadas e assadas</li><li>Acompanhamentos variados</li></ul>
@@ -83,10 +84,10 @@
     </section>
     <section id="galeria"><div class="largura"><p class="rotulo">Galeria</p><h2>Conheça nosso espaço</h2>
       <div class="fotos">
-        <img loading="lazy" src="assets/images/salao-480.webp" srcset="assets/images/salao-480.webp 480w, assets/images/salao-960.webp 960w" sizes="(max-width: 600px) 45vw, 24vw" alt="Salão do restaurante">
-        <img loading="lazy" src="assets/images/galeria-buffet-480.webp" alt="Buffet do dia">
-        <img loading="lazy" src="assets/images/galeria-churrasco-480.webp" alt="Churrasco brasileiro">
-        <img loading="lazy" src="assets/images/comida-brasileira-480.webp" alt="Mesa com pratos brasileiros">
+        <img loading="lazy" decoding="async" width="480" height="320" src="assets/images/salao-480.webp" srcset="assets/images/salao-480.webp 480w, assets/images/salao-960.webp 960w" sizes="(max-width: 640px) 90vw, (max-width: 1100px) 45vw, (max-width: 1600px) 24vw, 360px" alt="Salão do restaurante">
+        <img loading="lazy" decoding="async" width="480" height="621" src="assets/images/galeria-buffet-480.webp" alt="Buffet do dia">
+        <img loading="lazy" decoding="async" width="480" height="320" src="assets/images/galeria-churrasco-480.webp" alt="Churrasco brasileiro">
+        <img loading="lazy" decoding="async" width="480" height="320" src="assets/images/comida-brasileira-480.webp" alt="Mesa com pratos brasileiros">
       </div></div></section>
     <section id="horarios" class="largura faixa"><h2>Horário de<br>funcionamento</h2>
       <div><strong>Segunda a sexta</strong><p>11h às 15h</p></div><div><strong>Sábado, domingo e feriados</strong><p>11h às 16h</p></div>

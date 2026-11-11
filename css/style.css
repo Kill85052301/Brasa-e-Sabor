@@ -42,7 +42,7 @@ h1 em { color: #cd652e; font-style: normal; }
 #buffet { padding-block: clamp(36px, 4vw, 64px); }
 .vitrine, .grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(24px, 4vw, 65px); }
 .vitrine { align-items: center; }
-.vitrine img { width: 100%; aspect-ratio: 1.65; object-fit: cover; border-radius: 14px; }
+.vitrine img { height: auto; width: 100%; aspect-ratio: 1.65; object-fit: cover; border-radius: 14px; }
 .vitrine h2 { margin: 8px 0 16px; }
 .vitrine p { max-width: 49ch; }
 .lista { list-style: none; padding: 0; }
@@ -59,7 +59,7 @@ dd { margin: 0 0 .6rem; }
 #galeria { padding-block: 34px; }
 #galeria h2 { margin: 7px 0 24px; }
 .fotos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 18px; }
-.fotos img { width: 100%; aspect-ratio: 1.6; object-fit: cover; border: 1px solid #ad7348; border-radius: 12px; }
+.fotos img { height: auto; width: 100%; aspect-ratio: 1.6; object-fit: cover; border: 1px solid #ad7348; border-radius: 12px; }
 .faixa { justify-content: space-between; padding-block: 32px; }
 .faixa h2 { font-size: 1.65rem; }
 .faixa > div { border-left: 1px solid var(--borda); padding-left: 22px; }
@@ -95,17 +95,15 @@ address { font-style: normal; overflow-wrap: anywhere; }
 
 /* É o mesmo conjunto observado no JavaScript, sem animar filhos de cartões. */
 @media (prefers-reduced-motion: no-preference) {
-  html.motion-ready :is(main h1, main h2, main h3, main p, main .bloco, main img, .rodape p):not(.bloco *):not(.reveal-visible):not(:focus-within) {
+  html.motion-ready :is(main h1, main h2, main h3, main p, main .bloco, main img):not(.bloco *):not(.reveal-visible):not(:focus-within) {
     opacity: 0;
     transform: translateY(12px);
     transition: none;
   }
 }
 
-
-
 /* Cabeçalho e abertura compactos, restritos a celular e tablet. */
-.menu-toggle, .horario-menu, .hero-compacto { display: none; }
+.menu-toggle, .horario-menu { display: none; }
 @media (max-width: 1100px) {
   header .barra { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding-block: 12px; }
   header .marca { justify-self: start; font-size: 1.5rem; }
@@ -117,15 +115,15 @@ address { font-style: normal; overflow-wrap: anywhere; }
   header.menu-ready .menu-toggle { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid #845332; border-radius: 6px; color: var(--creme); background: transparent; font-size: 1.5rem; cursor: pointer; }
   .menu-toggle:focus-visible { outline: 3px solid var(--laranja); outline-offset: 4px; }
   header.menu-ready .menu-toggle[aria-expanded="false"] + nav { display: none; }
-  #inicio { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: 28px; padding: 36px 5%; background: #140c07; }
-  #inicio > .largura { grid-column: 1; grid-row: 1; width: 100%; min-width: 0; }
-  .hero-compacto { display: block; grid-column: 2; grid-row: 1; width: 100%; height: auto; border-radius: 10px; }
-  #inicio h1 { font-size: clamp(2.5rem, 5.5vw, 4rem); overflow-wrap: anywhere; }
-  #inicio .chamada { font-size: clamp(1.5rem, 2.8vw, 2rem); }
+  #inicio { padding-inline: 5%; }
+  #inicio > .largura { width: 100%; min-width: 0; }
+  #inicio h1 { overflow-wrap: anywhere; }
+
   #inicio .rotulo { font-size: .68rem; letter-spacing: .14em; }
   #inicio .acoes { gap: 12px; }
   #inicio .botao { text-align: center; max-width: 100%; }
 }
+
 @media (max-width: 640px) {
   #inicio {
     display: block;
@@ -133,45 +131,30 @@ address { font-style: normal; overflow-wrap: anywhere; }
     background: linear-gradient(90deg, rgba(20, 12, 7, .82), rgba(20, 12, 7, .58)),
       url("../assets/images/churrasco-960.webp") 62% center / cover no-repeat;
   }
-  #inicio .hero-compacto { display: none; }
   #inicio h1 { font-size: clamp(2.5rem, 10vw, 3.5rem); }
   #inicio .acoes { align-items: stretch; }
   #inicio .acoes .botao { flex: 1 1 180px; display: flex; align-items: center; justify-content: center; min-height: 3.5rem; }
+  #galeria .fotos { grid-template-columns: minmax(0, 1fr); }
+  #sobre .quatro > div + div { border-left: 0; }
 }
 
-/* Galeria: duas colunas no tablet e uma coluna no celular. */
 @media (min-width: 641px) and (max-width: 1100px) {
   #galeria .fotos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  #galeria .fotos img { display: block; height: auto; aspect-ratio: 1.6; }
-}
-@media (max-width: 640px) {
-  #galeria .fotos { grid-template-columns: minmax(0, 1fr); }
-}
-
-/* Abertura sobre a fotografia na faixa de tablet. */
-@media (min-width: 641px) and (max-width: 1100px) {
+  #galeria .fotos img { display: block; }
   #inicio {
     display: block;
     padding-block: clamp(56px, 7vw, 76px);
     background: linear-gradient(90deg, rgba(20, 12, 7, .86), rgba(20, 12, 7, .7) 55%, rgba(20, 12, 7, .4)),
       url("../assets/images/churrasco-960.webp") 65% center / cover no-repeat;
   }
-  #inicio .hero-compacto { display: none; }
   #inicio > .largura { max-width: 640px; margin-inline: 0; }
   #inicio h1 { font-size: clamp(3.25rem, 6vw, 4.125rem); }
   #inicio .chamada { font-size: clamp(1.75rem, 3vw, 2.1rem); }
-  #inicio .intro { max-width: 46ch; }
+
   #inicio .acoes { align-items: stretch; gap: 16px; }
   #inicio .acoes .botao { display: inline-flex; align-items: center; justify-content: center; min-height: 3.5rem; }
-}
-
-/* Benefícios: quatro colunas equilibradas no tablet. */
-@media (min-width: 641px) and (max-width: 1100px) {
   #sobre .quatro { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; padding-block: 24px; }
   #sobre .quatro > div { min-width: 0; padding-inline: clamp(8px, 1.5vw, 16px); }
   #sobre .quatro h3 { font-size: clamp(1rem, 1.8vw, 1.25rem); line-height: 1.2; overflow-wrap: break-word; }
   #sobre .quatro p { font-size: clamp(.8rem, 1.3vw, .9rem); line-height: 1.45; overflow-wrap: break-word; }
-}
-@media (max-width: 640px) {
-  #sobre .quatro > div + div { border-left: 0; }
 }

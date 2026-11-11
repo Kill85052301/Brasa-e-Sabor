@@ -5,6 +5,7 @@
   const menu = header.querySelector('#menu-principal');
   const compact = window.matchMedia('(max-width: 1100px)');
   const close = () => {
+    if (button.getAttribute('aria-expanded') === 'false') return;
     button.setAttribute('aria-expanded', 'false');
     button.setAttribute('aria-label', 'Abrir menu');
   };

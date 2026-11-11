@@ -33,6 +33,7 @@
     detachPreference();
   };
   const observer = new IntersectionObserver((entries) => {
+    if (!root.classList.contains('motion-ready')) return;
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
       const element = entry.target;
@@ -61,7 +62,7 @@
     release();
   }, { threshold: 0, rootMargin: '0px 0px -16px 0px' });
 
-  document.querySelectorAll('main h1, main h2, main h3, main p, main .bloco, main img, .rodape p')
+  document.querySelectorAll('main h1, main h2, main h3, main p, main .bloco, main img')
     .forEach((element) => {
       // Evita camadas e animações duplicadas dentro dos cartões.
       if (element.parentElement.closest('.bloco')) return;
