@@ -67,6 +67,7 @@ footer { border-top: 4px solid var(--terracota); padding-block: 30px; }
 #contato { margin: 18px auto; font-size: .87rem; }
 address { font-style: normal; overflow-wrap: anywhere; }
 .credito { border-top: 1px solid #845332; width: min(100%, 420px); margin: auto; padding-top: 14px; }
+.credito .autor { color: #df7138; }
 /* Movimento discreto, apenas quando autorizado pelo sistema. */
 @media (prefers-reduced-motion: no-preference) {
   .botao, nav a {
@@ -157,4 +158,43 @@ address { font-style: normal; overflow-wrap: anywhere; }
   #sobre .quatro > div { min-width: 0; padding-inline: clamp(8px, 1.5vw, 16px); }
   #sobre .quatro h3 { font-size: clamp(1rem, 1.8vw, 1.25rem); line-height: 1.2; overflow-wrap: break-word; }
   #sobre .quatro p { font-size: clamp(.8rem, 1.3vw, .9rem); line-height: 1.45; overflow-wrap: break-word; }
+}
+
+/* Localização com espaço reservado para o mapa durante o carregamento. */
+.localizacao {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: stretch;
+  gap: clamp(24px, 3vw, 48px);
+  padding-block: clamp(36px, 5vw, 72px);
+  scroll-margin-top: 24px;
+}
+.localizacao-info {
+  min-width: 0;
+  padding: clamp(24px, 3vw, 40px);
+  background: #fff9f1;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+}
+.localizacao h2 { margin: 12px 0 24px; }
+.localizacao address { line-height: 1.7; }
+.localizacao-aviso {
+  margin-block: 20px 24px;
+  color: var(--oliva);
+  font-size: .9rem;
+  font-weight: 600;
+}
+.localizacao .botao { max-width: 100%; text-align: center; }
+.localizacao-mapa {
+  display: block;
+  width: 100%;
+  height: 400px;
+  min-width: 0;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  background: #f1e5d7;
+}
+@media (max-width: 640px) {
+  .localizacao { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .localizacao-mapa { height: 320px; }
 }
